@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@aws-amplify/ui-angular/theme.css';
+
+
+* {
+    font-family: 'Amazon Ember', sans-serif;
+    font-size: 10pt;
+    background-color: #FFFFFF;
+    color: #232F3E;
+  }
+  
+  body {
+    background-color: #FFFFFF;
+  }
+  
+  
+.bodydiv {
+  padding-left: 25%;
+  padding-right: 25%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+  .tinyFont {
+    font-size: x-small;
+  }
+  
+
+  footer {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1%;
+    text-align: left;
+  }

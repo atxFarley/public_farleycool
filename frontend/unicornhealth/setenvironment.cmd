@@ -1,0 +1,7 @@
+set PROJECTREGION="us-east-1"
+set CONGNITOIDENTITYPOOLID=""
+set COGNITOUSERPOOLID="us-east-1_FLDoOLi1b"
+set COGNITOAPPCLIENTID="2cbcsqn97k4t5i3r3mhtlf8tj3"
+set S3BUCKETURL=""
+set APISERVICEURL="https://i04st6u0dh.execute-api.us-east-1.amazonaws.com"
+set TENANTID="A"

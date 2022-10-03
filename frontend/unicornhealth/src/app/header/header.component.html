@@ -1,0 +1,17 @@
+<amplify-authenticator [loginMechanisms]="['email']"  [signUpAttributes]="['name', 'email']"  [services]="services" initialState="signUp" variation="modal">
+    <ng-template
+      amplifySlot="authenticated"
+      let-user="user"
+      let-signOut="signOut"
+    >
+      <div class="container-fluid">
+        <div class="row">
+          <div  class="col-sm" style="padding: 1%;"><h5>Tenant {{tenant}}</h5></div>
+          <div class="col-sm" align="right" style="padding: 1%;">Welcome {{ user.username }}
+            <br/>
+            <button (click)="signOut()">Sign Out</button>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </amplify-authenticator>

@@ -1,0 +1,33 @@
+<div class="container-fluid bodydiv">
+    <div class="row">
+        <div class="col">
+            <h4>Welcome to Unicorn Health File Portal</h4>
+            <br/><br/>
+            <div>
+              <div *ngIf="!fileName">
+                {{fileName || "No file uploaded yet."}}
+                <br/>
+                <br/>
+              </div>
+
+              <div *ngIf="fileName && !uploadedHealthFile.uploadJSONResponse">
+                <i>Uploading {{fileName}}...</i>
+                <br/>
+                <br/>
+              </div>
+              (<a href="/assets/uploadfiles/Patient Visit Summary.png" target="_blank">Sample Patient Visit Summary</a>)
+              <br/>
+              <br/>
+              <label>Choose File to Upload:  
+              <input type="file" #chosenhealthfile name="uploadFiletoAPI" (change)="fileChange($event)" placeholder="Choose File"/>&nbsp;&nbsp;&nbsp;<button type="submit"(click)="fileUpload();chosenhealthfile.value='';">Upload</button>
+              </label>
+              <div *ngIf="fileName && uploadedHealthFile.uploadJSONResponse">
+                <br/>
+                <br/>
+                Upload {{fileName}} Complete<br/><br/>
+                <pre>{{uploadedHealthFile.uploadJSONResponse}}</pre>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
